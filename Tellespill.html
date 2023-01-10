@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hei!!</title>
+    <style>
+    div {
+        color: green;
+        background-color: lightblue;
+        padding: 10px;
+        margin: 10px;
+        border: solid black 2px;
+    }
+
+    div.selected {
+        border: dashed red 5px;
+    }
+
+    h1 {
+        background-color: grey;
+        border: dashed red 5px;
+    }
+    </style>
+</head>
+<body>
+<h1 id="overskrift">veloemmeenn dhhdh anan</h1>
+<div onclick="hallo(this)"> Si skal lære om HTML, CSS og javascriptSi skal lære om HTML, C </div>
+<div onclick="hallo(this)" class="selected">Si skal lære om HTML, CSS og javascriptSi skal lære om HTML, CSS og javascript </div>
+<div onclick="hallo(this)">Si skal lære om HTML, CSS og javascriptSi skal lære om HTML, CSS og javascript </div>
+<script>
+var teller = 0;
+function hallo(element) {
+    teller++;
+    element.innerHTML = 'x';
+    document.getElementById('overskrift').innerHTML =
+    'Du har trykket ' + teller + 'ganger';
+}
+</script>
+</body>
+</html>
